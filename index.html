@@ -1,68 +1,975 @@
 <!DOCTYPE html>
-<html lang>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+                font-family: 'lato', sans-serif;
+            }
+            body{
+                background: #f1f1f1;
+            }
+            .conteudo{
+              left: 50%;
+              margin: 0 0 0 -250px;
+              position: absolute;
+              width: 500px;
+            }
+            .calendar{
+                text-align: center;
+            }
+            .conteudo .calendar header{
+                position: relative;
+            }
+            h2{
+                margin-top: 20px;
+                font-size: 32px;
+                text-transform: uppercase;
+            }
+            .calendar table{
+                margin-top: 20px;
+                border-collapse: collapse;
+            }
+            .calendar thead{
+                background: azure;
+                font-weight: 600;
+                text-transform: uppercase;
+                border-bottom: 2px solid red;
+            }
+            .calendar td{
+                border: 1px solid #cbd1d2;
+                height: 71.4px;
+                text-align: center;
+                width: 71.4px;
+            }
+            .calendar tbody td{
+                cursor: pointer;
+            }
+            .calendar tbody td:hover{
+                background: black;
+                color: #f9f9f9;
+            }
+            .calendar table .event{
+                background: rgb(0, 128, 6);
+                color: #000000;
+            }
+            .calendar .proximo-mes, .calendar .mes-anterior{
+                color: #cbd1d2;
+            }
+            .calendar .proximo-mes:hover, .calendar .mes-anterior:hover{
+                background: #98a0a0;
+            }
+            .calendar table .aulas{
+                background: rgb(230, 255, 118);
+                color: #000000;
+            }
+            .calendar table .recuperaçao{
+                background: rgb(236, 255, 152);
+                color: #000000;
+            }
+            .calendar table .exame{
+                background: rgb(243, 127, 127);
+                color: #000000;
+            }
+            .calendar table .ferias{
+                background: rgb(153, 252, 153);
+                color: #000000;
+            }
+        </style>
         <title>Document</title>
     </head>
     <body>
-        <h1>Classificados</h1>
-
-        <img src="https://s3.ecompletocarros.dev/images/lojas/108/veiculos/71861/veiculoInfoVeiculoImagesMobile/vehicle_image_1630098354_d41d8cd98f00b204e9800998ecf8427e.jpeg" width="600px" height="400px" alt="AMG">
-        <h3>MERCEDES-BENZ CLA45 S 4MATIC 2.0T 421CV C/TETO AUT./2020</h3>
-        <h2>R$ 45.000,00</h2>
-        <br>
-        <img src="https://quatrorodas.abril.com.br/wp-content/uploads/2020/01/ford-mustang-gt350r-16.jpg?quality=70&strip=info" width="500px" height=" 400px" alt="Mustang">
-        <h3>Mustang V8 shelby</h3>
-        <h2>R$23.500,00</h2>
-        <br>
-
-        <h1>Classificados APARTAMENTO para alugar</h1>
-
-        <img src="https://img.olx.com.br/images/24/247315742540510.jpg" alt="apt">
-        <h3>APARTAMENTO</h3>
-        <ul>
-            <li>2 Quartos</li>
-            <li>Banheiros</li>
-            <li>Cozinha</li>
-            <li>Jardim</li>
-        </ul>
-        <h2>R$1100,00   </h2>
-
-        <img src="https://img.olx.com.br/images/91/915386736764686.jpg" alt="apta">
-        <h3>APARTAMENTO</h3>
-        <ul>
-            <li>2 Quartos</li>
-            <li>Sacada</li>
-            <li>Cozinha</li>
-            <li>Lavanderia</li>
-        </ul>
-        <h2>R$1600,00</h2>
-
-        <h1>Classificados de Empregos</h1>
-
-        <ul>
-            <li>Vaga para Aux.Estoquista
-                <ul>
-                    <li>Experiencia em estoque</li>
-                    <li>Criatividade</li>
-                    <li>Organizado</li>
-                    <li>Determinado</li>
-                </ul>
-            </li>
-            <br>
-            <li>Vaga Dev. Java
-                <ul>
-                    <li>Experiencia na área</li>
-                    <li>Conhecimentos Lógicos</li>
-                    <li>Saber Java e JavaScrip</li>
-                    <li>Determinado Aprender coisa nova</li>
-                </ul>
-            </li>
-        </ul>
-
-
-
+        <div class="conteudo">
+            <div class="calendar">
+                <header>
+                    <h2>Janeiro - 2023</h2>
+                </header>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>DOM</td>
+                            <td>SEG</td>
+                            <td>TER</td>
+                            <td>QUA</td>
+                            <td>QUI</td>
+                            <td>SEX</td>
+                            <td>SAB</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="event">1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>10</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td>19</td>
+                            <td>20</td>
+                            <td>21</td>
+                        </tr>
+                        <tr>
+                            <td>22</td>
+                            <td>23</td>
+                            <td>24</td>
+                            <td>25</td>
+                            <td>26</td>
+                            <td>27</td>
+                            <td>28</td>
+                        </tr>
+                        <tr>
+                            <td>29</td>
+                            <td>30</td>
+                            <td>31</td>
+                            <td class="proximo-mes">1</td>
+                            <td class="proximo-mes">2</td>
+                            <td class="proximo-mes">3</td>
+                            <td class="proximo-mes">4</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <div>
+                    <p>1 – Feriado nacional: Confraternização Universal</p>
+                </div>
+                <br>
+                <header>
+                    <h2>Fevereiro - 2023</h2>
+                </header>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>DOM</td>
+                            <td>SEG</td>
+                            <td>TER</td>
+                            <td>QUA</td>
+                            <td>QUI</td>
+                            <td>SEX</td>
+                            <td>SAB</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="mes-anterior">29</td>
+                            <td class="mes-anterior">30</td>
+                            <td class="mes-anterior">31</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>10</td>
+                            <td>11</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                        </tr>
+                        <tr>
+                            <td>19</td>
+                            <td class="event">20</td>
+                            <td class="event">21</td>
+                            <td>22</td>
+                            <td>23</td>
+                            <td>24</td>
+                            <td>25</td>
+                        </tr>
+                        <tr>
+                            <td>26</td>
+                            <td>27</td>
+                            <td>28</td>
+                            <td class="proximo-mes">1</td>
+                            <td class="proximo-mes">2</td>
+                            <td class="proximo-mes">3</td>
+                            <td class="proximo-mes">4</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <div>
+                    <p>20 e 21 (carnaval) – Recesso acadêmico</p>
+                </div>
+                <br>
+                <header>
+                    <h2>Março - 2023</h2>
+                </header>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>DOM</td>
+                            <td>SEG</td>
+                            <td>TER</td>
+                            <td>QUA</td>
+                            <td>QUI</td>
+                            <td>SEX</td>
+                            <td>SAB</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="mes-anterior">26</td>
+                            <td class="mes-anterior">27</td>
+                            <td class="mes-anterior">28</td>
+                            <td class="aulas">1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td class="event">9</td>
+                            <td class="event">10</td>
+                            <td class="event">11</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                        </tr>
+                        <tr>
+                            <td>19</td>
+                            <td>20</td>
+                            <td>21</td>
+                            <td>22</td>
+                            <td>23</td>
+                            <td>24</td>
+                            <td>25</td>
+                        </tr>
+                        <tr>
+                            <td>26</td>
+                            <td>27</td>
+                            <td>28</td>
+                            <td>29</td>
+                            <td>30</td>
+                            <td>31</td>
+                            <td class="proximo-mes">1</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <div>
+                    <p> 1 – Início das aulas
+                        <br>
+                        9 – Feriado municipal em Joinville: aniversário da cidade
+                        <br>
+                        10 e 11 – Recesso acadêmico em Joinville
+                    </p>
+                </div>
+                <br>
+                <header>
+                    <h2>Abril - 2023</h2>
+                </header>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>DOM</td>
+                            <td>SEG</td>
+                            <td>TER</td>
+                            <td>QUA</td>
+                            <td>QUI</td>
+                            <td>SEX</td>
+                            <td>SAB</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="mes-anterior">26</td>
+                            <td class="mes-anterior">27</td>
+                            <td class="mes-anterior">28</td>
+                            <td class="mes-anterior">29</td>
+                            <td class="mes-anterior">30</td>
+                            <td class="mes-anterior">31</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td class="event">7</td>
+                            <td class="event">8</td>
+                        </tr>
+                        <tr>
+                            <td class="event">9</td>
+                            <td>10</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td class="event">15</td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td>19</td>
+                            <td>20</td>
+                            <td class="event">21</td>
+                            <td class="event">22</td>
+                        </tr>
+                        <tr>
+                            <td>23</td>
+                            <td>24</td>
+                            <td>25</td>
+                            <td>26</td>
+                            <td>27</td>
+                            <td>28</td>
+                            <td>29</td>
+                        </tr>
+                        <tr>
+                            <td>30</td>
+                            <td class="proximo-mes">1</td>
+                            <td class="proximo-mes">2</td>
+                            <td class="proximo-mes">3</td>
+                            <td class="proximo-mes">4</td>
+                            <td class="proximo-mes">5</td>
+                            <td class="proximo-mes">6</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <div>
+                    <p> 7 – Feriado nacional: Sexta-feira da Paixão
+                        <br>
+                        8 – Recesso acadêmico
+                        <br>
+                        9 – Páscoa
+                        <br>
+                        15 – Feriado municipal em São Francisco do Sul: aniversário da cidade
+                        <br>
+                        21 – Feriado nacional: Tiradentes
+                        <br>
+                        22 – Recesso acadêmico
+                        <br>
+                    </p>
+                </div>
+                <br>
+                <header>
+                    <h2>Maio - 2023</h2>
+                </header>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>DOM</td>
+                            <td>SEG</td>
+                            <td>TER</td>
+                            <td>QUA</td>
+                            <td>QUI</td>
+                            <td>SEX</td>
+                            <td>SAB</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="mes-anterior">30</td>
+                            <td class="event">1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>10</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td>19</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>21</td>
+                            <td>22</td>
+                            <td>23</td>
+                            <td>24</td>
+                            <td>25</td>
+                            <td>26</td>
+                            <td>27</td>
+                        </tr>
+                        <tr>
+                            <td>28</td>
+                            <td>29</td>
+                            <td>30</td>
+                            <td>31</td>
+                            <td class="proximo-mes">1</td>
+                            <td class="proximo-mes">2</td>
+                            <td class="proximo-mes">3</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <div>
+                    <p>1 – Feriado nacional: Dia do Trabalho</p>
+                </div>
+                <br>
+                <header>
+                    <h2>Junho - 2023</h2>
+                </header>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>DOM</td>
+                            <td>SEG</td>
+                            <td>TER</td>
+                            <td>QUA</td>
+                            <td>QUI</td>
+                            <td>SEX</td>
+                            <td>SAB</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="mes-anterior">28</td>
+                            <td class="mes-anterior">29</td>
+                            <td class="mes-anterior">30</td>
+                            <td class="mes-anterior">31</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td class="event">8</td>
+                            <td class="event">9</td>
+                            <td class="event">10</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                        </tr>
+                        <tr>
+                            <td>18</td>
+                            <td>19</td>
+                            <td>20</td>
+                            <td>21</td>
+                            <td>22</td>
+                            <td>23</td>
+                            <td>24</td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>26</td>
+                            <td>27</td>
+                            <td>28</td>
+                            <td>29</td>
+                            <td>30</td>
+                            <td class="proximo-mes">1</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <div>
+                    <p>
+                        8 – Feriado nacional: Corpus Christi
+                        <br>
+                        9 e 10 – Recesso acadêmico
+                    </p>
+                </div>
+                <br>
+                <header>
+                    <h2>Julho - 2023</h2>
+                </header>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>DOM</td>
+                            <td>SEG</td>
+                            <td>TER</td>
+                            <td>QUA</td>
+                            <td>QUI</td>
+                            <td>SEX</td>
+                            <td>SAB</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="mes-anterior">25</td>
+                            <td class="mes-anterior">26</td>
+                            <td class="mes-anterior">27</td>
+                            <td class="mes-anterior">28</td>
+                            <td class="mes-anterior">29</td>
+                            <td class="mes-anterior">30</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td class="recuperaçao">10</td>
+                            <td class="recuperaçao">11</td>
+                            <td class="recuperaçao">12</td>
+                            <td class="recuperaçao">13</td>
+                            <td class="recuperaçao">14</td>
+                            <td class="recuperaçao">15</td>
+                        </tr>
+                        <tr>
+                            <td>16</td>
+                            <td class="exame">17</td>
+                            <td class="exame">18</td>
+                            <td class="exame">19</td>
+                            <td class="exame">20</td>
+                            <td class="exame">21</td>
+                            <td class="exame">22</td>
+                        </tr>
+                        <tr>
+                            <td>23</td>
+                            <td class="ferias">24</td>
+                            <td class="ferias">25</td>
+                            <td class="ferias">26</td>
+                            <td class="ferias">27</td>
+                            <td class="ferias">28</td>
+                            <td class="ferias">29</td>
+                        </tr>
+                        <tr>
+                            <td>30</td>
+                            <td class="aulas">31</td>
+                            <td class="proximo-mes">1</td>
+                            <td class="proximo-mes">2</td>
+                            <td class="proximo-mes">3</td>
+                            <td class="proximo-mes">4</td>
+                            <td class="proximo-mes">5</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <div>
+                    <p>
+                        10 a 15 – Reposição/recuperação de aulas
+                        <br>
+                        17 a 22 – Exames finais
+                        <br>
+                        24 a 29 – Recesso acadêmico
+                        <br>
+                        31 – Início das aulas
+                    </p>
+                </div>
+                <br>
+                <header><h2>Agosto - 2023</h2></header>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>DOM</td>
+                            <td>SEG</td>
+                            <td>TER</td>
+                            <td>QUA</td>
+                            <td>QUI</td>
+                            <td>SEX</td>
+                            <td>SAB</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="mes-anterior">30</td>
+                            <td class="mes-anterior">31</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>10</td>
+                            <td>11</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td>19</td>
+                        </tr>
+                        <tr>
+                            <td>20</td>
+                            <td>21</td>
+                            <td>22</td>
+                            <td>23</td>
+                            <td>24</td>
+                            <td>25</td>
+                            <td>26</td>
+                        </tr>
+                        <tr>
+                            <td>27</td>
+                            <td>28</td>
+                            <td>29</td>
+                            <td>30</td>
+                            <td>31</td>
+                            <td class="proximo-mes">1</td>
+                            <td class="proximo-mes">2</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <header><h2>Setembro - 2023</h2></header>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>DOM</td>
+                            <td>SEG</td>
+                            <td>TER</td>
+                            <td>QUA</td>
+                            <td>QUI</td>
+                            <td>SEX</td>
+                            <td>SAB</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="mes-anterior">27</td>
+                            <td class="mes-anterior">28</td>
+                            <td class="mes-anterior">29</td>
+                            <td class="mes-anterior">30</td>
+                            <td class="mes-anterior">31</td>
+                            <td>1</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td class="event">7</td>
+                            <td class="event">8</td>
+                            <td class="event">9</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td>16</td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td>18</td>
+                            <td>19</td>
+                            <td>20</td>
+                            <td>21</td>
+                            <td>22</td>
+                            <td class="event">23</td>
+                        </tr>
+                        <tr>
+                            <td>24</td>
+                            <td>25</td>
+                            <td>26</td>
+                            <td>27</td>
+                            <td>28</td>
+                            <td>29</td>
+                            <td>30</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <div>
+                    <p>
+                        7 – Feriado nacional: Independência do Brasil
+                        <br>
+                        8 – Feriado municipal em São Francisco do Sul: Dia da Padroeira
+                        <br>
+                        8 e 9 – Recesso acadêmico
+                        <br>
+                        23 – Feriado municipal em São Bento do Sul: aniversário da cidade
+                    </p>
+                </div>
+                <br>
+                <header><h2>Outubro - 2023</h2></header>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>DOM</td>
+                            <td>SEG</td>
+                            <td>TER</td>
+                            <td>QUA</td>
+                            <td>QUI</td>
+                            <td>SEX</td>
+                            <td>SAB</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>10</td>
+                            <td>11</td>
+                            <td class="event">12</td>
+                            <td>13</td>
+                            <td>14</td>
+                        </tr>
+                        <tr>
+                            <td class="event">15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                            <td>19</td>
+                            <td>20</td>
+                            <td>21</td>
+                        </tr>
+                        <tr>
+                            <td>22</td>
+                            <td>23</td>
+                            <td>24</td>
+                            <td>25</td>
+                            <td>26</td>
+                            <td>27</td>
+                            <td>28</td>
+                        </tr>
+                        <tr>
+                            <td>29</td>
+                            <td>30</td>
+                            <td>31</td>
+                            <td class="proximo-mes">1</td>
+                            <td class="proximo-mes">2</td>
+                            <td class="proximo-mes">3</td>
+                            <td class="proximo-mes">4</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <div>
+                    <p>
+                        12 – Feriado nacional: Dia de Nossa Senhora Aparecida
+                        <br>
+                        15 – Dia do Professor e do Auxiliar de Administração Escolar – feriado escolar
+                    </p>
+                </div>
+                <br>
+                <header><h2>Novembro - 2023</h2></header>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>DOM</td>
+                            <td>SEG</td>
+                            <td>TER</td>
+                            <td>QUA</td>
+                            <td>QUI</td>
+                            <td>SEX</td>
+                            <td>SAB</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="mes-anterior">29</td>
+                            <td class="mes-anterior">30</td>
+                            <td class="mes-anterior">31</td>
+                            <td>1</td>
+                            <td class="event">2</td>
+                            <td>3</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>10</td>
+                            <td>11</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td class="event">15</td>
+                            <td>16</td>
+                            <td>17</td>
+                            <td>18</td>
+                        </tr>
+                        <tr>
+                            <td>19</td>
+                            <td>20</td>
+                            <td>21</td>
+                            <td>22</td>
+                            <td>23</td>
+                            <td>24</td>
+                            <td>25</td>
+                        </tr>
+                        <tr>
+                            <td>26</td>
+                            <td>27</td>
+                            <td>28</td>
+                            <td>29</td>
+                            <td>30</td>
+                            <td class="proximo-mes">1</td>
+                            <td class="proximo-mes">2</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <div>
+                    <p>
+                        2 – Feriado nacional: Finados
+                        <br>
+                        15 – Feriado nacional: Proclamação da República
+                    </p>
+                </div>
+                <br>
+                <header><h2>Dezembro - 2023</h2></header>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>DOM</td>
+                            <td>SEG</td>
+                            <td>TER</td>
+                            <td>QUA</td>
+                            <td>QUI</td>
+                            <td>SEX</td>
+                            <td>SAB</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="mes-anterior">26</td>
+                            <td class="mes-anterior">27</td>
+                            <td class="mes-anterior">28</td>
+                            <td class="mes-anterior">29</td>
+                            <td class="mes-anterior">30</td>
+                            <td>1</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td class="recuperaçao">4</td>
+                            <td class="recuperaçao">5</td>
+                            <td class="recuperaçao">6</td>
+                            <td class="recuperaçao">7</td>
+                            <td class="recuperaçao">8</td>
+                            <td class="recuperaçao">9</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td class="exame">11</td>
+                            <td class="exame">12</td>
+                            <td class="exame">13</td>
+                            <td class="exame">14</td>
+                            <td class="exame">15</td>
+                            <td class="exame">16</td>
+                        </tr>
+                        <tr>
+                            <td>17</td>
+                            <td>18</td>
+                            <td>19</td>
+                            <td>20</td>
+                            <td>21</td>
+                            <td>22</td>
+                            <td>23</td>
+                        </tr>
+                        <tr>
+                            <td>24</td>
+                            <td class="event">25</td>
+                            <td>26</td>
+                            <td>27</td>
+                            <td>28</td>
+                            <td>29</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>31</td>
+                            <td class="proximo-mes">1</td>
+                            <td class="proximo-mes">2</td>
+                            <td class="proximo-mes">3</td>
+                            <td class="proximo-mes">4</td>
+                            <td class="proximo-mes">5</td>
+                            <td class="proximo-mes">6</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <div>
+                    <p>
+                        4 a 9 – Reposição/recuperação de aulas
+                        <br>
+                        <br>
+                        11 a 16 – Reposição/recuperação de aulas para os cursos de Ciências da Religião, Educação Especial, Educação Escolar Quilombola, Geografia e Pedagogia e para a 5.ª série do curso de Psicologia
+                        <br>
+                        <br>
+                        25 – Natal
+                    </p>
+                </div>
+                <br>
+            </div>
+            
+        </div>
+       
     </body>
 </html>
